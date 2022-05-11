@@ -24,5 +24,48 @@
             loginScenario.RepeatPasswordField.SendKeys(repeatPassword);
             loginScenario.LoginButton.Click();
         }
+
+        public static void FillRegistrationForm(string id, string password, string name, string address, int country, string zip, string email, bool gender, bool english, string aboutMe)
+        {
+            RegistrationScenarioPost registrationScenario = new RegistrationScenarioPost();
+
+            registrationScenario.IdField.Clear();
+            registrationScenario.IdField.SendKeys(id);
+
+            registrationScenario.PasswordField.Clear();
+            registrationScenario.PasswordField.SendKeys(password);
+
+            registrationScenario.NameField.Clear();
+            registrationScenario.NameField.SendKeys(name);
+
+            registrationScenario.AddressField.Clear();
+            registrationScenario.AddressField.SendKeys(address);
+
+            registrationScenario.USADropdown.Click();
+
+           
+            registrationScenario.ZipField.Clear();
+            registrationScenario.ZipField.SendKeys(zip);
+
+            registrationScenario.EmailField.Clear();
+            registrationScenario.EmailField.SendKeys(email);
+
+            registrationScenario.MaleRadioButton.Click();
+
+            registrationScenario.CheckBoxLanguage.Click();
+
+            registrationScenario.DescriptionField.Clear();
+            registrationScenario.DescriptionField.SendKeys("About me");
+
+            registrationScenario.RegisterButton.Click();
+
+
+
+
+
+
+
+
+        }
     }
 }

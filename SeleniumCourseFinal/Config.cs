@@ -66,6 +66,7 @@
             public static string UsernameLengthOutOfRange = "User Id should not be empty / length be between 5 to 12";
             public static string PasswordLenghtOutOfRange = "Password should not be empty / length be between 5 to 12";
             public static string SuccessfulLogin = "Succesful login!";
+            public static string IdOutOfRange = "User Id should not be empty / length be between 5 to 12";
         }
     }
 

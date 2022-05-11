@@ -23,5 +23,14 @@
             menu.TestScenarios.Click();
             tsPage.LoginFormScenario.Click();
         }
+
+        public static void RegistrationFormThroughTestScenarios()
+        {
+            Menu menu = new Menu();
+            TestScenariosPage tsPage = new TestScenariosPage();
+
+            menu.TestScenarios.Click();
+            tsPage.RegistrationFormScenario.Click();
+        }
     }
 }
