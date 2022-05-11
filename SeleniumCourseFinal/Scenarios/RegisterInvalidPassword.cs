@@ -36,7 +36,7 @@ namespace SeleniumCourseFinal.Scenarios
                 1,
                 "71000",
                 "fariscolakovic@icloud.com",
-                true,
+                1,
                 true,
                 "description"
                 );
@@ -59,7 +59,7 @@ namespace SeleniumCourseFinal.Scenarios
                 1,
                 "71000",
                "fariscolakovic@icloud.com",
-                true,
+                1,
                 true,
                 "description"
                 );

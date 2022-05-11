@@ -25,7 +25,7 @@
             loginScenario.LoginButton.Click();
         }
 
-        public static void FillRegistrationForm(string id, string password, string name, string address, int country, string zip, string email, bool gender, bool english, string aboutMe)
+        public static void FillRegistrationForm(string id, string password, string name, string address, int country, string zip, string email, int gender, bool english, string aboutMe)
         {
             RegistrationScenarioPost registrationScenario = new RegistrationScenarioPost();
 
@@ -41,7 +41,8 @@
             registrationScenario.AddressField.Clear();
             registrationScenario.AddressField.SendKeys(address);
 
-            registrationScenario.USADropdown.Click();
+            if (country != -1) registrationScenario.USADropdown.Click();
+            else registrationScenario.DefaultDropdownCountryValue.Click();
 
            
             registrationScenario.ZipField.Clear();
@@ -50,7 +51,9 @@
             registrationScenario.EmailField.Clear();
             registrationScenario.EmailField.SendKeys(email);
 
-            registrationScenario.MaleRadioButton.Click();
+          if (gender==1) registrationScenario.MaleRadioButton.Click();
+
+          if (gender == 2) registrationScenario.FemaleRadioButton.Click();
 
             registrationScenario.CheckBoxLanguage.Click();
 

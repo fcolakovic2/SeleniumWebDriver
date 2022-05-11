@@ -29,7 +29,10 @@ namespace SeleniumCourseFinal.Pages
 
         [FindsBy(How = How.CssSelector, Using = "#post-70 > div > form > ul > li:nth-child(10) > select > option:nth-child(2)")]
         public IWebElement AustraliaDropdown { get; set; }
-
+        
+        [FindsBy(How = How.CssSelector, Using = "#post-70 > div > form > ul > li:nth-child(10) > select > option:nth-child(1)")]
+        public IWebElement DefaultDropdownCountryValue { get; set; }
+        
 
         [FindsBy(How = How.CssSelector, Using = "#post-70 > div > form > ul > li:nth-child(10) > select > option:nth-child(6)")]
         public IWebElement USADropdown { get; set; }

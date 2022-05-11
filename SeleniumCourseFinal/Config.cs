@@ -70,6 +70,10 @@
             public static string PasswordOutOfRange = "Password should not be empty / length be between 7 to 12";
             public static string InvalidUsername = "Username must have alphabet characters only";
             public static string InvalidAddress = "User address must have alphanumeric characters only";
+            public static string InvalidCountry = "Select your country from the list";
+            public static string InvalidZIP = "ZIP code must have numeric characters only";
+            public static string InvalidEmail = "Select your country from the list";
+            public static string InvalidGender = "You must choose your gender";
         }
     }
 
