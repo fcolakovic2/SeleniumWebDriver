@@ -8,11 +8,11 @@ namespace SeleniumCourseFinal.Scenarios
 {
     using OpenQA.Selenium;
     using NUnit.Framework;
-    public class RegisterInvalidName
+    public class RegisterInvalidAddress
     {
         IAlert alert;
 
-        public RegisterInvalidName()
+        public RegisterInvalidAddress()
         {
 
         }
@@ -31,8 +31,8 @@ namespace SeleniumCourseFinal.Scenarios
             Actions.FillRegistrationForm(
                 "111111",
                 "passpass",
+                "Faris",
                 "",
-                "Adresa",
                 1,
                 "71000",
                 "fariscolakovic@icloud.com",
@@ -43,7 +43,7 @@ namespace SeleniumCourseFinal.Scenarios
 
             alert = Driver.driver.SwitchTo().Alert();
 
-            Assert.AreEqual(Config.AlertsTexts.InvalidUsername, alert.Text);
+            Assert.AreEqual(Config.AlertsTexts.InvalidAddress, alert.Text);
             alert.Accept();
         }
 
@@ -54,8 +54,8 @@ namespace SeleniumCourseFinal.Scenarios
             Actions.FillRegistrationForm(
                 "111111",
                 "passpass",
-                "Faris!",
-                "Adresa",
+                "Faris",
+                "Adresa!",
                 1,
                 "71000",
                 "fariscolakovic@icloud.com",
@@ -66,20 +66,20 @@ namespace SeleniumCourseFinal.Scenarios
 
             alert = Driver.driver.SwitchTo().Alert();
 
-            Assert.AreEqual(Config.AlertsTexts.InvalidUsername, alert.Text);
+            Assert.AreEqual(Config.AlertsTexts.InvalidAddress, alert.Text);
             alert.Accept();
         }
 
 
 
         [TestCase]
-        public void NumbersInsideAUsername()
+        public void NumbersInsideTheAddress()
         {
             Actions.FillRegistrationForm(
                 "1111111",
                 "passpass",
-                "Faris1",
-                "Adresa",
+                "Faris",
+                "Dzemala Bijedica 140",
                 1,
                 "71000",
                "fariscolakovic@icloud.com",
@@ -90,7 +90,7 @@ namespace SeleniumCourseFinal.Scenarios
 
             alert = Driver.driver.SwitchTo().Alert();
 
-            Assert.AreEqual(Config.AlertsTexts.InvalidUsername, alert.Text);
+            Assert.AreEqual(Config.AlertsTexts.InvalidAddress, alert.Text);
             alert.Accept();
         }
 
